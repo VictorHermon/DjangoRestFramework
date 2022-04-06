@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 
 
 class AlunosViewSet(viewsets.ModelViewSet):
-    """Exibindo todos os alunos"""
+    """Exibe todos os alunos"""
     queryset = Aluno.objects.all()
     serializer_class = AlunoSerializer
     authentication_classes = [BasicAuthentication]
@@ -15,7 +15,7 @@ class AlunosViewSet(viewsets.ModelViewSet):
 
 
 class CursosViewSet(viewsets.ModelViewSet):
-    """Exibindo todos os cursos"""
+    """Exibe todos os cursos"""
     queryset = Curso.objects.all()
     serializer_class = CursoSerializer
     authentication_classes = [BasicAuthentication]

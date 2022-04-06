@@ -41,9 +41,9 @@ class MatriculasDoAlunoSerializer(serializers.ModelSerializer):
 
 
 class MatriculasNoCursoSerializer(serializers.ModelSerializer):
-    aluno_nome = serializers.ReadOnlyField(source='aluno.nome')
-    aluno_cpf = serializers.ReadOnlyField(source='aluno.cpf')
+    aluno = serializers.ReadOnlyField(source='aluno.nome')
+    cpf = serializers.ReadOnlyField(source='aluno.cpf')
 
     class Meta:
         model = Matricula
-        fields = ['aluno_nome', 'aluno_cpf']
+        fields = ['aluno', 'cpf']
